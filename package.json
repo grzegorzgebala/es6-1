@@ -1,7 +1,6 @@
 {
   "name": "es6",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,5 +11,14 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grzegorzgebala/es6-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grzegorzgebala/es6-1/issues"
+  },
+  "homepage": "https://github.com/grzegorzgebala/es6-1#readme",
+  "description": ""
 }
