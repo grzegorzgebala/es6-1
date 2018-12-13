@@ -9,19 +9,23 @@
 // console.log(multiply(5));
 
 // Zad 3
-// let sum = 0, steps = 0, res = 0;
-// const average = (...args) => args.forEach(arg => {
-// 	sum += arg;
-// 	steps++;
-// 	res = sum/steps;
-// 	return res;
-// })(console.log(res));
 
- 
+ const average = (...args) => {
+ let sum = 0;
+ let steps = 0;
 
-// average(1);
-// average(1, 3);
-// average(1, 3, 6, 6);
+ args.forEach((arg, index) => {
+	sum += arg;
+	steps = (index + 1);
+ });
+
+ return sum/steps;
+
+};
+
+console.log(average(1));
+console.log(average(1, 3));
+console.log(average(1, 3, 6, 6));
 
 // // Zad 4
 
@@ -36,8 +40,8 @@
 
 // Zad 5
 
- const names = [1, 4, 'Iwona', false, 'Nowak'];
+ // const names = [1, 4, 'Iwona', false, 'Nowak'];
 
- const [ , , third, ,fifth] = names;
+ // const [ , , third, ,fifth] = names;
 
- console.log(third, fifth);
+ // console.log(third, fifth);

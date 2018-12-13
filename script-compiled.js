@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // // Zad1
 // const sayHello = (name = 'World', hello = 'Hello') => console.log(`${hello} ${name}!`);
@@ -11,18 +11,26 @@
 // console.log(multiply(5));
 
 // Zad 3
-// let sum = 0, steps = 0, res = 0;
-// const average = (...args) => args.forEach(arg => {
-// 	sum += arg;
-// 	steps++;
-// 	res = sum/steps;
-// 	return res;
-// })(console.log(res));
 
+var average = function average() {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
 
-// average(1);
-// average(1, 3);
-// average(1, 3, 6, 6);
+  var sum = 0;
+  var steps = 0;
+
+  args.forEach(function (arg, index) {
+    sum += arg;
+    steps = index + 1;
+  });
+
+  return sum / steps;
+};
+
+console.log(average(1));
+console.log(average(1, 3));
+console.log(average(1, 3, 6, 6));
 
 // // Zad 4
 
@@ -37,10 +45,8 @@
 
 // Zad 5
 
-var names = [1, 4, 'Iwona', false, 'Nowak'];
+// const names = [1, 4, 'Iwona', false, 'Nowak'];
 
-var third = names[2],
-    fifth = names[4];
+// const [ , , third, ,fifth] = names;
 
-
-console.log(third, fifth);
+// console.log(third, fifth);
