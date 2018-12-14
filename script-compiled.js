@@ -1,52 +1,68 @@
-"use strict";
+'use strict';
 
 // // Zad1
-// const sayHello = (name = 'World', hello = 'Hello') => console.log(`${hello} ${name}!`);
-// sayHello();
+var sayHello = function sayHello() {
+	var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'World';
+	var hello = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'Hello';
+	return console.log(hello + ' ' + name + '!');
+};
+sayHello();
 
 // // Zad 2
-// let multiply = (x, y = '1') => {return x * y};
-// console.log(multiply(2, 5));
-// console.log(multiply(6, 6));
-// console.log(multiply(5));
+var multiply = function multiply(x) {
+	var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '1';
+	return x * y;
+};
+console.log(multiply(2, 5));
+console.log(multiply(6, 6));
+console.log(multiply(5));
 
 // Zad 3
 
-var average = function average() {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
+var averages = function averages() {
+	for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+		args[_key] = arguments[_key];
+	}
 
-  var sum = 0;
-  var steps = 0;
+	var sum = 0;
+	var steps = 0;
 
-  args.forEach(function (arg, index) {
-    sum += arg;
-    steps = index + 1;
-  });
+	args.forEach(function (arg, index) {
+		sum += arg;
+		steps = index + 1;
+	});
 
-  return sum / steps;
+	return sum / steps;
 };
 
-console.log(average(1));
-console.log(average(1, 3));
-console.log(average(1, 3, 6, 6));
+console.log(averages(1));
+console.log(averages(1, 3));
+console.log(averages(1, 3, 6, 6));
 
 // // Zad 4
 
-// const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
+var grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
 
-// let averages = (...args) => grades.forEach(arg => console.log(arg));
+var average = function average() {
+	var sum = 0;
+	var steps = 0;
 
+	grades.forEach(function (arg, index) {
+		sum += arg;
+		steps = index + 1;
+	});
 
-// let averages = (...args) => grades.forEach(arg => console.log((arg += 1)/arg));
+	return sum / steps;
+};
 
-// averages();
+console.log(average());
 
 // Zad 5
 
-// const names = [1, 4, 'Iwona', false, 'Nowak'];
+var names = [1, 4, 'Iwona', false, 'Nowak'];
 
-// const [ , , third, ,fifth] = names;
+var third = names[2],
+    fifth = names[4];
 
-// console.log(third, fifth);
+
+console.log(third, fifth);
